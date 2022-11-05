@@ -3,7 +3,7 @@ import React from "react";
 export default function DataTable() {
   return (
     <div className="w-full p-4">
-      <table className="w-full table table-dark table-striped text-center">
+      <table className="w-full table table-dark table-striped text-center border-[1px] border-gray-800">
         <thead>
           <tr>
             <th scope="col">Time</th>
@@ -13,6 +13,7 @@ export default function DataTable() {
             <th scope="col">Sensor 4</th>
           </tr>
         </thead>
+
         <tbody>
           <tr>
             <th scope="row">1</th>
