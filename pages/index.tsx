@@ -28,8 +28,7 @@ export default function Home() {
 
         const Data: Array<number> = await res.json();
         setData(Data);
-        setPrevData({ ...Data, ...prevData });
-        console.log(prevData);
+        setPrevData((prevData) => [...Data, ...prevData]);
       } catch (err) {
         console.log(err);
       }
