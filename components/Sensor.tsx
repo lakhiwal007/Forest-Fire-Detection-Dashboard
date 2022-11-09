@@ -1,5 +1,7 @@
 import React from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import Gauge from "./Gauge";
+
 type SensorProp = {
   sensor: string;
   data: number;
@@ -12,6 +14,10 @@ export default function Sensors({ sensor, data, prevData }: SensorProp) {
         <p className="text-slate-700 text-3xl md:text-5xl text-right">
           {sensor}
         </p>
+        <Gauge
+          value={data}
+          // any other options you want
+        />
         <p className="text-5xl md:text-8xl mb-4">{data}</p>
         <p className="text-gray-400 text-3xl md:text-5xl flex items-center ml-8 ">
           {prevData}{" "}

@@ -1,6 +1,13 @@
 import React from "react";
-
-export default function DataTable() {
+interface dataProps {
+  data: Array<number>;
+}
+export default function DataTable({ data }: dataProps) {
+  const dataTable = [];
+  while (data.length > 0) {
+    dataTable.push(data.splice(0, 3));
+  }
+  // console.log(dataTable);
   return (
     <div className="w-full p-4">
       <table className="w-full table table-dark table-striped text-center border-[1px] border-gray-800">
