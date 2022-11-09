@@ -7,8 +7,8 @@ import Sensors from "../components/Sensors";
 
 export default function Home() {
   const [data, setData] = useState<number[]>([1, 1, 1, 1]);
+  const [pData, setPData] = useState<number[]>([1, 1, 1, 1]);
 
-  // console.log(prevData);
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
@@ -28,6 +28,7 @@ export default function Home() {
 
         const Data: Array<number> = await res.json();
         setData(Data);
+        setPData((pData) => [...Data, ...pData]);
       } catch (err) {
         console.log(err);
       }
@@ -46,10 +47,10 @@ export default function Home() {
       </Head>
 
       <Header />
-      <Sensors data={data} />
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <IITKMap data={data}/>
-        <DataTable data={data} />
+      <Sensors data={data} pData={pData} />
+      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4 pl-4 pr-4">
+        <IITKMap data={data} />
+        <DataTable data={pData} />
       </div>
     </div>
   );

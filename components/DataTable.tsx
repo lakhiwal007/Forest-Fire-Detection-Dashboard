@@ -1,48 +1,41 @@
 import React from "react";
+
 interface dataProps {
   data: Array<number>;
 }
+
 export default function DataTable({ data }: dataProps) {
+  const dataCpy = [...data];
   const dataTable = [];
-  while (data.length > 0) {
-    dataTable.push(data.splice(0, 3));
+  while (dataCpy.length > 0) {
+    dataTable.push(dataCpy.splice(0, 4));
   }
-  // console.log(dataTable);
+
   return (
-    <div className="w-full p-4">
-      <table className="w-full table table-dark table-striped text-center border-[1px] border-gray-800">
-        <thead>
+    <div className="w-full max-h-[45vh] overflow-y-scroll scrollbar-hide border-[1px] border-gray-800 rounded-md">
+      <table className="w-full text-center">
+        <thead className="sticky top-0 bg-gray-900 rounded font-bold text-md md:text-xl">
           <tr>
             <th scope="col">Time</th>
-            <th scope="col">Sensor 1</th>
-            <th scope="col">Sensor 2</th>
-            <th scope="col">Sensor 3</th>
-            <th scope="col">Sensor 4</th>
+            <th scope="col">Sensor1</th>
+            <th scope="col">Sensor2</th>
+            <th scope="col">Sensor3</th>
+            <th scope="col">Sensor4</th>
           </tr>
         </thead>
 
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>0</td>
-            <td>3</td>
-            <td>1</td>
-            <td>6</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>3</td>
-            <td>1</td>
-            <td>7</td>
-            <td>4</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>2</td>
-            <td>6</td>
-            <td>5</td>
-            <td>9</td>
-          </tr>
+          {dataTable.slice(1, dataTable.length).map((item, index) => {
+            return (
+              <tr key={index}>
+                <th scope="row">{index}</th>
+                <td>{item[0]}</td>
+                <td>{item[1]}</td>
+                <td>{item[2]}</td>
+                <td>{item[3]}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
