@@ -22,7 +22,7 @@ export default function Sensors({ sensor, data, prevData }: SensorProp) {
         <p className="text-gray-400 text-3xl md:text-5xl flex items-center ml-8 ">
           {prevData}{" "}
           {data - prevData === 0 ? (
-            <span className="text-5xl pl-4 text-slate-500">--</span>
+            <span className="text-3xl pl-4 text-slate-500">--</span>
           ) : data - prevData > 0 ? (
             <span className="text-3xl pl-4 text-red-500">
               <AiOutlineArrowUp />
