@@ -28,7 +28,7 @@ export default function Home() {
 
         const Data: Array<number> = await res.json();
         setData(Data);
-        setPrevData((prevData) => [...Data, ...prevData]);
+        setPrevData((prevData) => [...data, ...prevData]);
       } catch (err) {
         console.log(err);
       }
@@ -43,7 +43,7 @@ export default function Home() {
       <Head>
         <title>Forest Fire Detection Dashboard</title>
         <meta name="description" content="Forest Fire Detection Dashboard" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fire.png" />
       </Head>
 
       <Header />
