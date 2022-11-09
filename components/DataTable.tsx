@@ -14,7 +14,7 @@ export default function DataTable({ data }: dataProps) {
   return (
     <div className="w-full max-h-[45vh] overflow-y-scroll scrollbar-hide border-[1px] border-gray-800 rounded-md">
       <table className="w-full text-center">
-        <thead className="sticky top-0 h-[8vh] bg-gray-900 rounded font-bold text-md md:text-xl">
+        <thead className="sticky top-0 h-[8vh] bg-gray-900 rounded font-bold text-md md:text-2xl">
           <tr>
             <th scope="col">Time</th>
             <th scope="col">Sensor1</th>

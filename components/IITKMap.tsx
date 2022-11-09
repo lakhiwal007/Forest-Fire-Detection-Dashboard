@@ -20,7 +20,7 @@ export default function IITKMap({ data }: dataProps) {
             </p>
           )}
         </div>
-        <div className="w-[130px] absolute pl-2 pr-2 top-4 -left-8 backdrop-blur-sm rounded-lg border-[1px] border-slate-300">
+        <div className="w-[130px] lg:w-[150px] absolute pl-2 pr-2 top-4 -left-8 backdrop-blur-sm rounded-lg border-[1px] border-slate-300">
           <p>Sensor 1</p>
           <p>PK Kelkar Library</p>
         </div>
@@ -36,7 +36,7 @@ export default function IITKMap({ data }: dataProps) {
             </p>
           )}
         </div>
-        <div className="w-[130px] absolute pl-2 pr-2 top-4 -right-8 backdrop-blur-sm rounded-lg border-[1px] border-slate-300">
+        <div className="w-[130px] lg:w-[150px] absolute pl-2 pr-2 top-4 -right-8 backdrop-blur-sm rounded-lg border-[1px] border-slate-300">
           <p>Sensor 2</p>
           <p>Old SAC Complex</p>
         </div>
@@ -51,7 +51,7 @@ export default function IITKMap({ data }: dataProps) {
             </p>
           )}
         </div>
-        <div className="w-[130px] absolute pl-2 pr-2 bottom-12 -left-8 backdrop-blur-sm rounded-lg border-[1px] border-slate-300">
+        <div className="w-[130px] lg:w-[150px] absolute pl-2 pr-2 bottom-12 -left-8 backdrop-blur-sm rounded-lg border-[1px] border-slate-300">
           <p>Sensor 3</p>
           <p>New Core Labs</p>
         </div>
