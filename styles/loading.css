@@ -1,0 +1,93 @@
+div.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.Box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot1 {
+  background-color: #fbbf24;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 100%;
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: bounce 1.5s 0.5s linear infinite;
+  margin: 2vh;
+}
+
+.dot2 {
+  background-color: #dc2626;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 100%;
+  margin: 2vh;
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: bounce 1.5s 0.5s linear infinite;
+  animation-delay: 0.1s;
+}
+
+.dot3 {
+  background-color: #2dd4bf;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 100%;
+  margin: 2vh;
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: bounce 1.5s 0.5s linear infinite;
+  animation-delay: 0.2s;
+}
+
+.dot4 {
+  background-color: #86198f;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 100%;
+  margin: 2vh;
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: bounce 1.5s 0.5s linear infinite;
+  animation-delay: 0.3s;
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
+  font-size: 5vh;
+}
+
+.path {
+  stroke-dasharray: 2500;
+  stroke-dashoffset: 500;
+  animation: dash 3s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1500;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
