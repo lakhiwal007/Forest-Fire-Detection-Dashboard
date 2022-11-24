@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 import DataTable from "../components/DataTable";
 import Header from "../components/Header";
 import IITKMap from "../components/IITKMap";
+import Loading from "../components/Loading";
 import Sensors from "../components/Sensors";
 
 export default function Home() {
   const [data, setData] = useState<number[]>([1, 1, 1, 1]);
   const [pData, setPData] = useState<number[]>([1, 1, 1, 1]);
-
+  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     const interval = setInterval(async () => {
       try {
@@ -29,6 +30,7 @@ export default function Home() {
         const Data: Array<number> = await res.json();
         setData(Data);
         setPData((pData) => [...Data, ...pData]);
+        setLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -38,6 +40,7 @@ export default function Home() {
       clearInterval(interval);
     };
   }, []);
+  if(isLoading) return (<> <Loading/> </>)
   return (
     <div>
       <Head>
